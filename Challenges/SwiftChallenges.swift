@@ -43,6 +43,11 @@ class SwiftChallenges {
         
         return String(used)
     }
+    
+    func condenseWwhitespaces(input: String) -> String {
+        
+        return input.replacingOccurrences(of: " +", with: " ", options: .regularExpression, range: nil)
+    }
 }
 
 extension String {

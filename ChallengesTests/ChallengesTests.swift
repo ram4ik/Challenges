@@ -60,4 +60,11 @@ class ChallengesTests: XCTestCase {
         XCTAssertEqual(swiftChallenges.removeDuplicateLettersFrom(input: "hello"), "helo")
         XCTAssertEqual(swiftChallenges.removeDuplicateLettersFrom(input: "Mississippi"), "Misp")
     }
+    
+    func testCondenseWhitespaces() {
+        XCTAssertEqual(swiftChallenges.condenseWwhitespaces(input: "a    b  c"), "a b c")
+        XCTAssertEqual(swiftChallenges.condenseWwhitespaces(input: "a    b  c"), "a b c")
+        XCTAssertEqual(swiftChallenges.condenseWwhitespaces(input: "a   b b  c"), "a b b c")
+        XCTAssertEqual(swiftChallenges.condenseWwhitespaces(input: "a    b  cc   "), "a b cc ")
+    }
 }
