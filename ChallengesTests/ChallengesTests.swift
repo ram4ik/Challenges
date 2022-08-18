@@ -74,4 +74,9 @@ class ChallengesTests: XCTestCase {
         XCTAssertEqual(swiftChallenges.stringIsRotated(input1: "abcde", input2: "abced"), false)
         XCTAssertEqual(swiftChallenges.stringIsRotated(input1: "abc", input2: "a"), false)
     }
+    
+    func testFindPangrams() {
+        XCTAssertTrue(swiftChallenges.findPangrams(input: "The quick brown fox jumped over the lazy dog"))
+        XCTAssertFalse(swiftChallenges.findPangrams(input: "Swift in the best programming language"))
+    }
 }

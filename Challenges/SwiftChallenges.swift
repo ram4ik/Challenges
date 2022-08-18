@@ -56,6 +56,11 @@ class SwiftChallenges {
         let combined = input1 + input1
         return combined.contains(input2)
     }
+    
+    func findPangrams(input: String) -> Bool {
+        
+        return Set(Array(input.lowercased())).count == 26
+    }
 }
 
 extension String {
