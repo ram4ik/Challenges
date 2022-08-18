@@ -24,11 +24,6 @@ class SwiftChallenges {
         return Array(string1.replacingOccurrences(of: " ", with: "")).sorted() == Array(string2.replacingOccurrences(of: " ", with: "")).sorted()
     }
     
-    func stringContainsAnother(string1: String, containString: String) -> Bool {
-        
-        return true
-    }
-    
     func countCharacters(input: String, character: String) -> Int {
         
         let modified = input.replacingOccurrences(of: character, with: "")
