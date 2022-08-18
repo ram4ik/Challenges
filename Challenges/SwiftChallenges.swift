@@ -13,4 +13,9 @@ class SwiftChallenges {
         
         return Set(input).count == input.count
     }
+    
+    func isStringPalindrome(input: String) -> Bool {
+        
+        return input.lowercased().reversed() == Array(input.lowercased())
+    }
 }
