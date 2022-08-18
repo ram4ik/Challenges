@@ -48,6 +48,14 @@ class SwiftChallenges {
         
         return input.replacingOccurrences(of: " +", with: " ", options: .regularExpression, range: nil)
     }
+    
+    func stringIsRotated(input1: String, input2: String) -> Bool {
+        
+        guard Array(input1).count == Array(input2).count else { return false }
+        
+        let combined = input1 + input1
+        return combined.contains(input2)
+    }
 }
 
 extension String {

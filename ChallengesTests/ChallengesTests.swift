@@ -67,4 +67,11 @@ class ChallengesTests: XCTestCase {
         XCTAssertEqual(swiftChallenges.condenseWwhitespaces(input: "a   b b  c"), "a b b c")
         XCTAssertEqual(swiftChallenges.condenseWwhitespaces(input: "a    b  cc   "), "a b cc ")
     }
+    
+    func testStringIsRotated() {
+        XCTAssertEqual(swiftChallenges.stringIsRotated(input1: "abcde", input2: "eabcd"), true)
+        XCTAssertEqual(swiftChallenges.stringIsRotated(input1: "abcde", input2: "cdeab"), true)
+        XCTAssertEqual(swiftChallenges.stringIsRotated(input1: "abcde", input2: "abced"), false)
+        XCTAssertEqual(swiftChallenges.stringIsRotated(input1: "abc", input2: "a"), false)
+    }
 }
