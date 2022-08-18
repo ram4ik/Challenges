@@ -35,4 +35,16 @@ class ChallengesTests: XCTestCase {
         XCTAssertEqual(swiftChallenges.twoStringsContainSameCharacters(string1: "abc", string2: "Abc"), false)
         XCTAssertEqual(swiftChallenges.twoStringsContainSameCharacters(string1: "abc", string2: "cbAa"), false)
     }
+    
+    func testStringContainsAnotherString() {
+        
+        XCTAssertTrue("Hello, world".stringContains1("Hello"))
+        XCTAssertTrue("Hello, world".stringContains2("Hello"))
+        
+        XCTAssertTrue("Hello, world".stringContains1("WORLD"))
+        XCTAssertTrue("Hello, world".stringContains2("WORLD"))
+        
+        XCTAssertFalse("Hello, world".stringContains1("Goodbye"))
+        XCTAssertFalse("Hello, world".stringContains1("GoodBye"))
+    }
 }

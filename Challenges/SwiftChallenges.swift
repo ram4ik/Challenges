@@ -23,4 +23,20 @@ class SwiftChallenges {
 
         return Array(string1.replacingOccurrences(of: " ", with: "")).sorted() == Array(string2.replacingOccurrences(of: " ", with: "")).sorted()
     }
+    
+    func stringContainsAnother(string1: String, containString: String) -> Bool {
+        
+        return true
+    }
+}
+
+extension String {
+    
+    func stringContains1(_ string: String) -> Bool {
+        return self.uppercased().range(of: string.uppercased()) != nil
+    }
+    
+    func stringContains2(_ string: String) -> Bool {
+        return range(of: string, options: .caseInsensitive) != nil
+    }
 }
