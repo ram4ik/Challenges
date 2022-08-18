@@ -27,4 +27,12 @@ class ChallengesTests: XCTestCase {
         XCTAssertEqual(swiftChallenges.isStringPalindrome(input: "Hello, world"), false)
     }
 
+    func testTwoStringsContainSameCharacters() {
+        XCTAssertEqual(swiftChallenges.twoStringsContainSameCharacters(string1: "abca", string2: "abca"), true)
+        XCTAssertEqual(swiftChallenges.twoStringsContainSameCharacters(string1: "abc", string2: "cba"), true)
+        XCTAssertEqual(swiftChallenges.twoStringsContainSameCharacters(string1: "a1 b2", string2: "b 1 a 2"), true)
+        XCTAssertEqual(swiftChallenges.twoStringsContainSameCharacters(string1: "abc", string2: "abca"), false)
+        XCTAssertEqual(swiftChallenges.twoStringsContainSameCharacters(string1: "abc", string2: "Abc"), false)
+        XCTAssertEqual(swiftChallenges.twoStringsContainSameCharacters(string1: "abc", string2: "cbAa"), false)
+    }
 }

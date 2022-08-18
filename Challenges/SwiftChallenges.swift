@@ -18,4 +18,9 @@ class SwiftChallenges {
         
         return input.lowercased().reversed() == Array(input.lowercased())
     }
+    
+    func twoStringsContainSameCharacters(string1: String, string2: String) -> Bool {
+
+        return Array(string1.replacingOccurrences(of: " ", with: "")).sorted() == Array(string2.replacingOccurrences(of: " ", with: "")).sorted()
+    }
 }
