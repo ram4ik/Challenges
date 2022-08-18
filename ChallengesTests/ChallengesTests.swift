@@ -47,4 +47,11 @@ class ChallengesTests: XCTestCase {
         XCTAssertFalse("Hello, world".stringContains1("Goodbye"))
         XCTAssertFalse("Hello, world".stringContains1("GoodBye"))
     }
+    
+    func testCountCharacters() {
+        
+        XCTAssertEqual(swiftChallenges.countCharacters(input: "The rain in Spain", character: "a"), 2)
+        XCTAssertEqual(swiftChallenges.countCharacters(input: "Mississippi", character: "i"), 4)
+        XCTAssertEqual(swiftChallenges.countCharacters(input: "Hacking with Swift", character: "i"), 3)
+    }
 }

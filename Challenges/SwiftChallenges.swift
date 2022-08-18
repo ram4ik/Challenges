@@ -28,6 +28,13 @@ class SwiftChallenges {
         
         return true
     }
+    
+    func countCharacters(input: String, character: String) -> Int {
+        
+        let modified = input.replacingOccurrences(of: character, with: "")
+        
+        return Array(input).count - Array(modified).count
+    }
 }
 
 extension String {
