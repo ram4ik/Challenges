@@ -54,4 +54,10 @@ class ChallengesTests: XCTestCase {
         XCTAssertEqual(swiftChallenges.countCharacters(input: "Mississippi", character: "i"), 4)
         XCTAssertEqual(swiftChallenges.countCharacters(input: "Hacking with Swift", character: "i"), 3)
     }
+    
+    func testRemoveDuplicateLettersFromStrings() {
+        XCTAssertEqual(swiftChallenges.removeDuplicateLettersFrom(input: "wombat"), "wombat")
+        XCTAssertEqual(swiftChallenges.removeDuplicateLettersFrom(input: "hello"), "helo")
+        XCTAssertEqual(swiftChallenges.removeDuplicateLettersFrom(input: "Mississippi"), "Misp")
+    }
 }

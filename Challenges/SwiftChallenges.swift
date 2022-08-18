@@ -30,6 +30,19 @@ class SwiftChallenges {
         
         return Array(input).count - Array(modified).count
     }
+    
+    func removeDuplicateLettersFrom(input: String) -> String {
+        
+        var used = [Character]()
+        
+        for c in Array(input) {
+            if !used.contains(c) {
+                used.append(c)
+            }
+        }
+        
+        return String(used)
+    }
 }
 
 extension String {
